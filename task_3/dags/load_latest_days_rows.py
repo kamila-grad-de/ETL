@@ -18,6 +18,8 @@ def load_latest_days_rows():
     print(df.head(5).to_string(index=False))
     print(df.tail(5).to_string(index=False))
 
+    df.to_csv('/opt/airflow/output/latest_days_2018-12-08.csv', index=False)
+
 
 with DAG(
     dag_id="load_latest_days_rows",
